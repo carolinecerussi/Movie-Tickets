@@ -34,16 +34,27 @@ if (this.customerAge <= 5 && time <= 5)  {
   newPrice = agePrice + 3;
 }
   }
-this.price = newPrice;
+this.oneTicket = newPrice;
 return newPrice;
 
 }
 
 
 
-// MovieTicket.prototype.getQuantity() {
-
-// }
+MovieTicket.prototype.getQuantity = function() {
+const quantity = this.ticketQuanitity;
+const oneTicketPrice = this.ticketPrice ();
+console.log(oneTicketPrice)
+let totalPrice = 0;
+console.log(quantity);
+if (this.ticketQuanitity === "0"){
+  totalPrice = 0; 
+  console.log(totalPrice);
+} else {
+  totalPrice = oneTicketPrice * parseInt(this.ticketQuanitity) 
+return totalPrice;
+}
+}
 
 //ui logic 
 let movie = new MovieTicket ();
@@ -70,12 +81,15 @@ function handleForm (event) {
   const inputtedQuantity = document.querySelector("input#new-quantity").value;
   console.log(inputtedQuantity)
   let newMovieTicket =  new MovieTicket(inputtedTitle,inputtedTime,inputtedAge, inputtedQuantity);
+  const totalPrice = newMovieTicket.getQuantity();
+  console.log(totalPrice)
   const ticketPrice = newMovieTicket.ticketPrice();
-  console.log(ticketPrice)
 document.querySelector ('#movie-title').innerText = newMovieTicket.movieTitle;
 document.querySelector ('#movie-time').innerText = newMovieTicket.movieTime;
 document.querySelector('#quantity').innerText = newMovieTicket.ticketQuanitity;
-document.querySelector ('#movie-price').innerText = ticketPrice;
+document.querySelector ('#ticket-price').innerText = ticketPrice;
+
+document.querySelector ('#movie-price').innerText = totalPrice;
 document.querySelector ('div#ticket-receipt').removeAttribute ('class');
 
 }
