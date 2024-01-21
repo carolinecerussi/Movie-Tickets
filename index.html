@@ -13,6 +13,7 @@
 <body>
   <h1>Ticket Order</h1>
   <br/>
+  <div class="ticket-form-div">
 <form id="new-ticket-form">
     <label for ="new-ticket-title">Movie:</label>
     <select id="new-ticket-title">
@@ -21,7 +22,29 @@
         <option value="Back to the Future">Back To The Future</option>
         <option >Coraline</option>
 </select>
-</br>
+<br />
+<div class="radio">
+<label>
+  <input type="radio" name="movie" value="Jaws" checked>
+  <img src="./IMG/jaws.jpg" alt="Jaws Movie Poster" width="150px">
+</label>
+<label>
+  <input type="radio" name="movie" value="Back To The Future">
+  <img src="./IMG/back.jpg" alt="Back To The Future Movie Poster" width="150px" >
+</label>
+<label>
+  <input type="radio" name="movie" value="May December" >
+  <img src="./IMG/may.jpg" alt="May December Movie Poster" width="150px">
+</label>
+<label>
+  <input type="radio" name="movie" value="Poor Things">
+  <img src="./IMG/poor.jpg" alt="Poor Things Movie Poster" width="150px" >
+</label>
+
+</div>
+
+<br />
+
     <label for ="new-ticket-time">Time:</label>
     <select id="new-ticket-time">
         <option selected disabled>Time:</option>
@@ -36,11 +59,13 @@
     <label for="new-ticket-age">What is your age? </label>
     <input id="new-ticket-age" type="text">
   <br />
+    <label for="new-quantity">Quantity: </label>
   <input placeholder="0" type="number" id="new-quantity">
   <br />
       <button type="submit">Buy Ticket</button>
 
 </form>
+</div>
 <div id="ticket-receipt" class="hidden" >
 <h2>Ticket Receipt</h2>
   <p>Movie Title: <span id="movie-title" ></span></p>

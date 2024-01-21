@@ -90,7 +90,9 @@ document.querySelector('#quantity').innerText = newMovieTicket.ticketQuanitity;
 document.querySelector ('#ticket-price').innerText = ticketPrice;
 
 document.querySelector ('#movie-price').innerText = totalPrice;
+
 document.querySelector ('div#ticket-receipt').removeAttribute ('class');
+
 
 }
 
