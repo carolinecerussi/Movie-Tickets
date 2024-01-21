@@ -4,6 +4,7 @@ function MovieTicket(movieTitle, movieTime, customerAge, ticketQuanitity ) {
   this.movieTitle = movieTitle;
   this.movieTime = movieTime;
   this.customerAge = customerAge;
+  this.ticketQuanitity = ticketQuanitity;
 
 }
 
@@ -39,6 +40,11 @@ return newPrice;
 }
 
 
+
+// MovieTicket.prototype.getQuantity() {
+
+// }
+
 //ui logic 
 let movie = new MovieTicket ();
 
@@ -60,12 +66,15 @@ function handleForm (event) {
   console.log (inputtedTime);
   const inputtedAge = document.querySelector ('input#new-ticket-age')
     .value;
-  console.log(inputtedAge)
-  let newMovieTicket =  new MovieTicket(inputtedTitle,inputtedTime,inputtedAge);
+  console.log(inputtedAge);
+  const inputtedQuantity = document.querySelector("input#new-quantity").value;
+  console.log(inputtedQuantity)
+  let newMovieTicket =  new MovieTicket(inputtedTitle,inputtedTime,inputtedAge, inputtedQuantity);
   const ticketPrice = newMovieTicket.ticketPrice();
   console.log(ticketPrice)
 document.querySelector ('#movie-title').innerText = newMovieTicket.movieTitle;
 document.querySelector ('#movie-time').innerText = newMovieTicket.movieTime;
+document.querySelector('#quantity').innerText = newMovieTicket.ticketQuanitity;
 document.querySelector ('#movie-price').innerText = ticketPrice;
 document.querySelector ('div#ticket-receipt').removeAttribute ('class');
 
