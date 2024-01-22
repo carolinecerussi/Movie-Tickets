@@ -15,29 +15,30 @@
   <br/>
   <div class="ticket-form-div">
 <form id="new-ticket-form">
-    <label for ="new-ticket-title">Movie:</label>
+    <!-- <label for ="new-ticket-title">Movie:</label>
     <select id="new-ticket-title">
         <option selected disabled>Movie:</option>
         <option value="jaws">Jaws</option>
         <option value="Back to the Future">Back To The Future</option>
         <option >Coraline</option>
-</select>
+</select> -->
 <br />
 <div class="radio">
+<p>NOW PLAYING</p>
 <label>
-  <input type="radio" name="movie" value="Jaws" checked>
+  <input  id="new-ticket-title" type="radio" name="movie" value="Jaws" checked>
   <img src="./IMG/jaws.jpg" alt="Jaws Movie Poster" width="150px">
 </label>
 <label>
-  <input type="radio" name="movie" value="Back To The Future">
+  <input  id="new-ticket-title" type="radio" name="movie" value="Back To The Future">
   <img src="./IMG/back.jpg" alt="Back To The Future Movie Poster" width="150px" >
 </label>
 <label>
-  <input type="radio" name="movie" value="May December" >
+  <input  id="new-ticket-title" type="radio" name="movie" value="May December" >
   <img src="./IMG/may.jpg" alt="May December Movie Poster" width="150px">
 </label>
 <label>
-  <input type="radio" name="movie" value="Poor Things">
+  <input  id="new-ticket-title" type="radio" name="movie" value="Poor Things">
   <img src="./IMG/poor.jpg" alt="Poor Things Movie Poster" width="150px" >
 </label>
 
@@ -45,24 +46,25 @@
 
 <br />
 
-    <label for ="new-ticket-time">Time:</label>
+    <label for ="new-ticket-time">TIME:</label>
     <select id="new-ticket-time">
-        <option selected disabled>Time:</option>
+        <!-- <option selected disabled>Time:</option> -->
         <option value="3:00">3:00</option>
         <option value="4:55">4:55</option>
         <option >5:45</option>
           <option >7:15</option>
                     <option >8:30</option>
                     <option >10:00</option>
+                      <option >11:00</option>
     </select>
   </br>
-    <label for="new-ticket-age">What is your age? </label>
+    <label for="new-ticket-age">AGE: </label>
     <input id="new-ticket-age" type="text">
   <br />
-    <label for="new-quantity">Quantity: </label>
+    <label for="new-quantity">QUANTITY: </label>
   <input placeholder="0" type="number" id="new-quantity">
   <br />
-      <button type="submit">Buy Ticket</button>
+  <button type="submit">PURCHASE</button>
 
 </form>
 </div>

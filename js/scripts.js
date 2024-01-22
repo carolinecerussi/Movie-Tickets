@@ -66,13 +66,22 @@ let movie = new MovieTicket ();
 // document.querySelector ('#movie-price').innerText = ticketPrice;
 // document.querySelector ('div#ticket-receipt').removeAttribute ('class');
 // } 
+function getRadioOption() {
+  const radioOptions = document.querySelectorAll('input#new-ticket-title');
+  let selectedMovie ;
+  for (const radioOption of radioOptions){
+    if (radioOption.checked){
+      selectedMovie = radioOption.value;
+      console.log(selectedMovie)
+    }
+  }return selectedMovie;
+
+}
 
 
 function handleForm (event) {
   event.preventDefault ();
-  const inputtedTitle = document.querySelector ('select#new-ticket-title')
-    .value;
-    console.log(inputtedTitle)
+const inputtedTitle = getRadioOption();
   const inputtedTime = document.querySelector ('select#new-ticket-time').value;
   console.log (inputtedTime);
   const inputtedAge = document.querySelector ('input#new-ticket-age')
