@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&family=Righteous&display=swap');
+
 body {
+  font-family: 'Manrope';
   align-items: center;
-  margin: 5%;
 font-size: 12pt;
+padding: 3%;
 }
 
 h1 {
@@ -9,7 +12,10 @@ h1 {
 text-align: center;
 }
 
+marquee {
+  width: 80%;
 
+}
 label { 
   font-size: 13pt;
   color: rgb(30, 28, 28)
@@ -19,9 +25,9 @@ select {
 background-color: rgb(234, 247, 213);
 padding: 1%;
 color: black;
-border-radius: 4%;
+  border-radius: 4pt;
 margin: 2%;
-width: 50%;
+width: 15%;
 border-color: transparent;
 }
 
@@ -29,7 +35,7 @@ input {
 background-color: rgb(234, 247, 213);
 padding: 1%;
 color: black;
-border-radius: 4%;
+  border-radius: 4pt;
 margin: 2%;
 width: 15%;
   display: flex;
@@ -46,7 +52,7 @@ div#ticket-receipt {
 background-color: rgb(234, 247, 213);
 padding: 2%;
 color: black;
-border-radius: 4%;
+  border-radius: 4pt;
 margin-top: 5%;
 
 }
@@ -78,15 +84,22 @@ padding:2%;
 /* IMAGE STYLES */
 [type=radio] + img {
   cursor: pointer;
-  width: 200px;
-  height: 280px;
+  width: 215px;
+  height: 300px;
   object-fit: fill;
+  margin-left: 5%;
+  margin-top: 5%;
+
 }
 
 /* CHECKED STYLES */
 [type=radio]:checked + img {
   outline: 3px solid  rgb(204, 218, 183);
   scale: 1.06;
+}
+
+.radio {
+  text-align: center;
 }
 
 label, p, button {
@@ -101,14 +114,11 @@ p#movies {
 button {
   background-color: rgb(180, 208, 138);
   border-color: transparent;
-  padding: 2%;
-  border-radius: 4%;
+  padding: 1.5%;
+  border-radius: 4pt;
   
 }
 button:hover {
   background-color: rgb(212, 241, 169);
-  border-color: transparent;
-  padding: 2%;
-  border-radius: 4%;
   
 }

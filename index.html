@@ -11,10 +11,10 @@
   <title>Movie Ticket</title>
 </head>
 <body>
-  <h1>Ticket Order</h1>
+  <h1>MOVIES</h1>
   <br/>
   <div class="ticket-form-div">
-<form id="new-ticket-form">
+<form id="new-ticket-form" class="shown">
     <!-- <label for ="new-ticket-title">Movie:</label>
     <select id="new-ticket-title">
         <option selected disabled>Movie:</option>
@@ -25,6 +25,7 @@
 <br />
 <div class="radio">
 <p id="movies">NOW PLAYING</p>
+<marquee direction="left">
 <label>
   <input  id="new-ticket-title" type="radio" name="movie" value="Jaws" checked>
   <img src="./IMG/jaws.jpg" alt="Jaws Movie Poster" width="150px">
@@ -41,7 +42,7 @@
   <input  id="new-ticket-title" type="radio" name="movie" value="Poor Things">
   <img src="./IMG/poor.jpg" alt="Poor Things Movie Poster" width="150px" >
 </label>
-
+</marquee>
 </div>
 
 <br />
@@ -64,18 +65,22 @@
     <label for="new-quantity">QUANTITY: </label>
   <input placeholder="0" type="number" id="new-quantity">
   <br />
+      <label for="new-email">EMAIL: </label>
+  <input id="new-email" type="text">
   <button type="submit">PURCHASE</button>
 
 </form>
 </div>
 <div id="ticket-receipt" class="hidden" >
-<h2>RECEIPT </h2>
+<h2>THANK YOU FOR YOUR ORDER </h2>
+<p>We are excited to see you at the theater!<br />We  have sent your ticket order to  <span id="email-address"></span>.</p>
+<br />
   <p>Movie: <span id="movie-title" ></span></p>
     <p>Time: <span id="movie-time" ></span></p>
       <p>Quantity: <span id="quantity" ></span></p>
         <p>Ticket: $<span id="ticket-price" ></span></p>
       <p>Total: $<span id="movie-price" ></span></p>
-      <!-- <button type="button" class="delete" >Delete</button> -->
+      <button type="button" class="done" >DONE</button>
 </div>
 </body>
 </html>

@@ -1,10 +1,11 @@
 //business logic 
 
-function MovieTicket(movieTitle, movieTime, customerAge, ticketQuanitity ) {
+function MovieTicket(movieTitle, movieTime, customerAge, ticketQuanitity , emailAddress) {
   this.movieTitle = movieTitle;
   this.movieTime = movieTime;
   this.customerAge = customerAge;
   this.ticketQuanitity = ticketQuanitity;
+  this.emailAddress = emailAddress;
 
 }
 
@@ -89,7 +90,8 @@ const inputtedTitle = getRadioOption();
   console.log(inputtedAge);
   const inputtedQuantity = document.querySelector("input#new-quantity").value;
   console.log(inputtedQuantity)
-  let newMovieTicket =  new MovieTicket(inputtedTitle,inputtedTime,inputtedAge, inputtedQuantity);
+  const inputtedEmail = document.querySelector("input#new-email").value;
+  let newMovieTicket =  new MovieTicket(inputtedTitle,inputtedTime,inputtedAge, inputtedQuantity, inputtedEmail);
   const totalPrice = newMovieTicket.getQuantity();
   console.log(totalPrice)
   const ticketPrice = newMovieTicket.ticketPrice();
@@ -99,10 +101,12 @@ document.querySelector('#quantity').innerText = newMovieTicket.ticketQuanitity;
 document.querySelector ('#ticket-price').innerText = ticketPrice;
 
 document.querySelector ('#movie-price').innerText = totalPrice;
+document.querySelector ('#email-address').innerText =
+  newMovieTicket.emailAddress;
 
 document.querySelector ('div#ticket-receipt').removeAttribute ('class');
 
-
+document.querySelector("form").setAttribute("class","hidden");
 }
 
 
