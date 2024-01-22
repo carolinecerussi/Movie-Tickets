@@ -24,7 +24,7 @@
 </select> -->
 <br />
 <div class="radio">
-<p>NOW PLAYING</p>
+<p id="movies">NOW PLAYING</p>
 <label>
   <input  id="new-ticket-title" type="radio" name="movie" value="Jaws" checked>
   <img src="./IMG/jaws.jpg" alt="Jaws Movie Poster" width="150px">
@@ -69,12 +69,12 @@
 </form>
 </div>
 <div id="ticket-receipt" class="hidden" >
-<h2>Ticket Receipt</h2>
-  <p>Movie Title: <span id="movie-title" ></span></p>
-    <p>Movie Time: <span id="movie-time" ></span></p>
+<h2>RECEIPT </h2>
+  <p>Movie: <span id="movie-title" ></span></p>
+    <p>Time: <span id="movie-time" ></span></p>
       <p>Quantity: <span id="quantity" ></span></p>
-        <p>Price per ticket: <span id="ticket-price" ></span></p>
-      <p>Total : <span id="movie-price" ></span></p>
+        <p>Ticket: $<span id="ticket-price" ></span></p>
+      <p>Total: $<span id="movie-price" ></span></p>
       <!-- <button type="button" class="delete" >Delete</button> -->
 </div>
 </body>

@@ -9,9 +9,7 @@ h1 {
 text-align: center;
 }
 
-form { 
-  text-align: center;
-}
+
 label { 
   font-size: 13pt;
   color: rgb(30, 28, 28)
@@ -34,6 +32,7 @@ color: black;
 border-radius: 4%;
 margin: 2%;
 width: 15%;
+  display: flex;
 border-color: transparent;
 
 }
@@ -45,9 +44,22 @@ width: 15%;
 
 div#ticket-receipt {
 background-color: rgb(234, 247, 213);
-padding: 5%;
+padding: 2%;
 color: black;
 border-radius: 4%;
+margin-top: 5%;
+
+}
+
+div#ticket-receipt p {
+color: black;
+font-size: 13pt;
+}
+
+div#ticket-receipt h2 {
+color: black;
+font-size: 18pt;
+padding:2%;
 
 }
 
@@ -66,8 +78,8 @@ border-radius: 4%;
 /* IMAGE STYLES */
 [type=radio] + img {
   cursor: pointer;
-  width: 150px;
-  height: 205px;
+  width: 200px;
+  height: 280px;
   object-fit: fill;
 }
 
@@ -77,6 +89,26 @@ border-radius: 4%;
   scale: 1.06;
 }
 
-label {
+label, p, button {
   margin-left: 2%;
+}
+
+p#movies {
+  font-size: 20pt;
+  padding-bottom: 3%;
+}
+
+button {
+  background-color: rgb(180, 208, 138);
+  border-color: transparent;
+  padding: 2%;
+  border-radius: 4%;
+  
+}
+button:hover {
+  background-color: rgb(212, 241, 169);
+  border-color: transparent;
+  padding: 2%;
+  border-radius: 4%;
+  
 }
